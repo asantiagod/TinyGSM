@@ -323,7 +323,7 @@ class TinyGsmEC20 : public TinyGsmModem<TinyGsmEC20>,
     gprsDisconnect();
 
     // Configure the TCPIP Context
-    sendAT(GF("+QICSGP=1,1,\""), apn, GF("\",\""), user, GF("\",\""), pwd,
+    sendAT(GF("+QICSGP=1,3,\""), apn, GF("\",\""), user, GF("\",\""), pwd,
            GF("\""), GF(","), 1);
     if (waitResponse() != 1) { return false; }
     // Activate GPRS/CSD Context
